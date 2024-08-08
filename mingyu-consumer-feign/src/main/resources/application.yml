@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: mingyu-consumer-feign
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.30.1.83:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: 172.30.1.83:8080
+
+server:
+  port: 9092
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign:
+  sentinel:
+    enabled: true
+
